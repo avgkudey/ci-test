@@ -32,5 +32,5 @@ jobs:
         env:
           NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
 
-      - run: npm run start
+      - run: npm start
       - run: ngrok http 3000
