@@ -9,3 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt update
+      - run: ping 127.0.0.1
