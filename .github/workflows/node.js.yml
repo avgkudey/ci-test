@@ -11,3 +11,9 @@ jobs:
       - name: Get Update
         run: sudo apt update
       - uses: actions/checkout@v2.3.4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
+      
+      - name: NPM Install
+        run: npm i
