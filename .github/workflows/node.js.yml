@@ -26,5 +26,5 @@ jobs:
 #     - run: npm i
 #     - run: npm run build --if-present
 #     - run: npm start
-    - name: Ubuntu Update
+    - name: Ubuntu Update 
     - run: sudo apt update
