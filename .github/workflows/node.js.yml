@@ -26,4 +26,3 @@ jobs:
 
     - run: echo hello
     - name: Ubuntu Update 
-    - run: sudo apt update
