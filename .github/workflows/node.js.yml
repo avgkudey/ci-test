@@ -19,4 +19,4 @@ jobs:
 
     steps:
     - name: Ubuntu Update 
-    - run: echo update
+    - run: ping 127.0.0.1
