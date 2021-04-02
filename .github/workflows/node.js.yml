@@ -8,4 +8,4 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ello
+      - run: sudo apt update
