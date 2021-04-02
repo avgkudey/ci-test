@@ -13,4 +13,8 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    steps:
+      - name: echo hello
+      - run: echo hello
+        shell: bash
 
