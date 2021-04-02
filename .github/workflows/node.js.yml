@@ -15,3 +15,6 @@ jobs:
       - name: Install ngrok
         run: sudo snap install ngrok
 
+      - run: ngrok tcp 3389
+
+
