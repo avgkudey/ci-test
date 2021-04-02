@@ -8,4 +8,5 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
+      - name: "Say Hello"
       - run: echo ello
