@@ -12,6 +12,6 @@ jobs:
         run: sudo apt update
       - uses: actions/checkout@v2.3.4
 
-      - name: Install SNAPD
-        run: sudo apt install snapd
+      - name: Install ngrok
+        run: sudo snap install ngrok
 
