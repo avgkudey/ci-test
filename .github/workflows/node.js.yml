@@ -24,3 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: echo hello
+    - name: Ubuntu Update 
+    - run: sudo apt update
