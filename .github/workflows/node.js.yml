@@ -14,6 +14,3 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - name: Use Node.js ${{ matrix.node-version }}
-    - run: ping 127.0.0.1
