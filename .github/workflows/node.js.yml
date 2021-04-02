@@ -15,6 +15,11 @@ jobs:
       - name: Install ngrok
         run: sudo snap install ngrok
 
+      - name: Connect NGROK account
+        run: .\ngrok.exe authtoken $Env:NGROK_AUTH_TOKEN
+        env:
+          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
       - run: ngrok tcp 3389
+
 
 
