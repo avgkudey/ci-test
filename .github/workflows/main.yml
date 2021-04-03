@@ -30,4 +30,4 @@ jobs:
 
     steps:
       - name: Copy Build files to Public Folder In VPS
-        run: cp -a /actions-runner/tetracode-pos/ci-test/ci-test/build/. /var/www/html/
+        run: cp -a /actions-runner/tetracode-pos-work/ci-test/ci-test/build/. /var/www/html/
