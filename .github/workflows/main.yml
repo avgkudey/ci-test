@@ -20,8 +20,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run build --if-present
+      # - run: npm i
+      # - run: npm run build --if-present
       - run: npm test
 
   deploy:
@@ -29,4 +29,5 @@ jobs:
     needs: build
 
     steps:
-      - run: echo Hello
+      - name: Copy Build files to Public Folder
+        run: cp -a /actions-runner/tetracode-pos/ci-test/ci-test/build/. /var/www/html/
