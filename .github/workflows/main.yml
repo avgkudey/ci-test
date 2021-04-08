@@ -9,9 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [15.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -45,7 +45,7 @@ jobs:
         run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
 
       - name: check ngrock
-        run: ngrok tcp 3389 & 
+        run: ngrok tcp 3389 
       - name: Get Info
         run: curl http://localhost:4040/api/tunnels
 
