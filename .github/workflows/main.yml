@@ -62,7 +62,7 @@ jobs:
         run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
 
       - name: check ngrock
-        run: ngrok tcp 1234 & 
+        run: ngrok tcp 3389 & 
       - name: Get Info
         run: curl http://localhost:4040/api/tunnels
 
