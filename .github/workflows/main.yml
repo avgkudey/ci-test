@@ -44,7 +44,11 @@ jobs:
       #   run: sudo systemctl restart xrdp 
 
       - name: Firewall enable
-        run: sudo ufw disable
+        run: sudo ufw enable
+
+      - name: Firewall Show
+        run: sudo ufw status
+
 
       # - name: Firewall enable
       #   run: sudo ufw allow 3389/tcp
