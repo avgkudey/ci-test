@@ -43,11 +43,11 @@ jobs:
       # - name: restart XRDP
       #   run: sudo systemctl restart xrdp 
 
-      - name: Firewall enable
-        run: sudo ufw enable
+      # - name: Firewall enable
+      #   run: sudo ufw enable
 
-      - name: Firewall Show
-        run: sudo ufw status
+      # - name: Firewall Show
+      #   run: sudo ufw status
 
 
       # - name: Firewall enable
@@ -62,7 +62,7 @@ jobs:
         run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
 
       - name: check ngrock
-        run: ngrok tcp 3389 & 
+        run: ngrok tcp 1234 & 
       - name: Get Info
         run: curl http://localhost:4040/api/tunnels
 
