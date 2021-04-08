@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -15,19 +15,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run build --if-present
-      - run: npm test
+      - name: install ngrock
+        run: sudo snap install ngrok
 
-  deploy:
-    runs-on: self-hosted
-    needs: build
-
-    steps:
-      - name: Copy Build files to Public Folder In VPS
-        run: sudo cp -a ~/actions-runner/tetracode-pos-work/ci-test/ci-test/build/. /var/www/html/
