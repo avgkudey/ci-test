@@ -24,5 +24,7 @@ jobs:
         run: ngrok tcp 3389 & 
       - name: Get Info
         run: curl http://localhost:4040/api/tunnels
+      - name: Ping
+        run: ping 127.0.0.1
 
 
