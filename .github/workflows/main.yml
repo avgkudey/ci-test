@@ -19,7 +19,7 @@ jobs:
         run: sudo useradd -p $(openssl passwd -1 remoteuser) remoteuser
 
       - name: Add User to Sudo
-        run: usermod -aG sudo remoteuser
+        run: sudo usermod -aG sudo remoteuser
 
       - name: install ngrock
         run: sudo snap install ngrok
