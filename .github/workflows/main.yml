@@ -63,8 +63,9 @@ jobs:
 
       - name: check ngrock
         run: ngrok tcp 3389 & 
+        
       - name: Get Info
-        run: curl http://localhost:4040/api/tunnels
+        run: curl -s http://localhost:4040/api/tunnels
 
       - name: Get IP
         run: dig +short myip.opendns.com @resolver1.opendns.com
