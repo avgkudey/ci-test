@@ -21,6 +21,13 @@ jobs:
       - name: Add User to Sudo
         run: sudo usermod -aG sudo remoteuser
 
+      - name: Firewall enable
+        run: sudo ufw enable
+
+      - name: Firewall enable
+        run: sudo ufw allow 3389
+
+
 
       # - name: Install xubuntu
         # run: sudo apt install xubuntu-desktop -y
