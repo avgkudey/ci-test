@@ -21,6 +21,16 @@ jobs:
       - name: Add User to Sudo
         run: sudo usermod -aG sudo remoteuser
 
+      - name: Install XRDP
+        run: sudo apt install xrdp -y
+        
+      - name: Add XRDP user
+        run: sudo adduser xrdp ssl-cert  
+
+                
+      - name: restart XRDP
+        run: sudo systemctl restart xrdp 
+
       - name: install ngrock
         run: sudo snap install ngrok
       - name: set key
