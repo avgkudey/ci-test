@@ -21,11 +21,8 @@ jobs:
       - name: Add User to Sudo
         run: sudo usermod -aG sudo remoteuser
 
-      - name: Firewall enable
-        run: sudo ufw enable
+     
 
-      - name: Firewall enable
-        run: sudo ufw allow 3389
 
 
 
@@ -43,6 +40,15 @@ jobs:
         run: sudo adduser xrdp ssl-cert  
 
                 
+      - name: restart XRDP
+        run: sudo systemctl restart xrdp 
+
+      - name: Firewall enable
+        run: sudo ufw enable
+
+      - name: Firewall enable
+        run: sudo ufw allow 3389/tcp
+        
       - name: restart XRDP
         run: sudo systemctl restart xrdp 
 
