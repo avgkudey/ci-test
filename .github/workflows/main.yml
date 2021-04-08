@@ -29,28 +29,28 @@ jobs:
         run: sudo apt install ubuntu-desktop -y
 
 
-      # - name: Install XRDP
-      #   run: sudo apt install xrdp -y
+      - name: Install XRDP
+        run: sudo apt install xrdp -y
         
-      # - name: Add XRDP user
-      #   run: sudo adduser xrdp ssl-cert  
+      - name: Add XRDP user
+        run: sudo adduser xrdp ssl-cert  
 
                 
-      # - name: restart XRDP
-      #   run: sudo systemctl restart xrdp 
+      - name: restart XRDP
+        run: sudo systemctl restart xrdp 
 
-      - name: install ngrock
-        run: sudo snap install ngrok
-      - name: set key
-        run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
+      # - name: install ngrock
+      #   run: sudo snap install ngrok
+      # - name: set key
+      #   run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
 
-      - name: check ngrock
-        run: ngrok tcp 3389 
-      - name: Get Info
-        run: curl http://localhost:4040/api/tunnels
+      # - name: check ngrock
+      #   run: ngrok tcp 3389 & 
+      # - name: Get Info
+      #   run: curl http://localhost:4040/api/tunnels
 
-      # - name: Get IP
-        # run: dig +short myip.opendns.com @resolver1.opendns.com
+      - name: Get IP
+        run: dig +short myip.opendns.com @resolver1.opendns.com
       - name: Ping
         run: ping 127.0.0.1
 
