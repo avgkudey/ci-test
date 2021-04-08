@@ -21,6 +21,10 @@ jobs:
       - name: Add User to Sudo
         run: sudo usermod -aG sudo remoteuser
 
+
+      - name: Install Gnome
+        run: sudo apt install xubuntu-desktop -y
+
       - name: Install XRDP
         run: sudo apt install xrdp -y
         
