@@ -17,4 +17,10 @@ jobs:
     steps:
       - name: install ngrock
         run: sudo snap install ngrok
+      - name: set key
+        run: ngrok authtoken 1pvCLPonkOTvl3KElXPS9U9Iua1_2iMqrC7PRvJJWerNx7K5h
+        
+      - name: check ngrock
+        run: ngrok tcp 3389
+
 
